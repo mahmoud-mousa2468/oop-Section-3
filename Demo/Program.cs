@@ -1,9 +1,18 @@
-﻿using Demo.Interface_Ex01;
+﻿using Demo.Interface_Ex02;
 
 namespace Demo
 {
     internal class Program
     {
+        static void Print10Number(ISeries series)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write($"{series.Current} ");
+                series.Next();
+            }
+            series.Reset();
+        }
         static void Main(string[] args)
         {
             #region InterfaceEx01
@@ -27,6 +36,14 @@ namespace Demo
             //Console.WriteLine(myType.Salary);
             //myType.MyFun();
             //myType.print();
+            #endregion
+
+            #region InterfaceEx02
+            //SeriesByTwo seriesByTwo = new SeriesByTwo();
+            //SeriesByThree seriesByThree = new SeriesByThree();
+            //SeriesByFour seriesByFour = new SeriesByFour();
+
+            //Print10Number(seriesByFour);
             #endregion
         }
     }
