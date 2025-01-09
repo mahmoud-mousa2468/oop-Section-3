@@ -1,5 +1,4 @@
-﻿using System.Text;
-using Demo.Interface_Ex02;
+﻿using Demo.Interface_Ex02;
 
 namespace Demo
 {
@@ -213,6 +212,33 @@ namespace Demo
             //Console.WriteLine(Arr01[0]);
 
             #endregion
+            #endregion
+
+            #region ICloneable
+            //Employee E01 = new Employee()
+            //{
+            //    Id = 1,
+            //    Name = "Ahmed",
+            //    Age = 30,
+            //    Salary = 5000
+            //};
+            //Employee E02 = new Employee()
+            //{
+            //    Id = 2,
+            //    Name = "Ali",
+            //    Age = 25,
+            //    Salary = 58880
+            //};
+
+            ////E01 = E02; // Shallow Copy
+            ////E01 = (Employee)E02.Clone(); // Deep Copy
+            //E01 = new Employee(E02); // Deep Copy using Copy Instructor
+
+            //E01.Salary = 3000;
+            //Console.WriteLine(E01.GetHashCode());
+            //Console.WriteLine(E02.GetHashCode());
+            //Console.WriteLine(E01);
+            //Console.WriteLine(E02);
             #endregion
         }
     }
