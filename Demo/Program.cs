@@ -2,6 +2,8 @@
 
 namespace Demo
 {
+
+
     internal class Program
     {
         static void Print10Number(ISeries series)
@@ -253,6 +255,22 @@ namespace Demo
             //// +ve : Caller Greater Than parameter
             //// -ve : Caller less Than Parameter
             //// 0   : Caller Equal Parameter
+            //foreach (var employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
+            #endregion
+
+            #region IComparer
+            //Employee[] employees = new Employee[]
+            //{
+            //    new Employee(){Id=1,Name="Ahmed",Age=30,Salary=12000},
+            //    new Employee(){Id=2,Name="Ali",Age=27,Salary=11000},
+            //    new Employee(){Id=3,Name="Amr",Age=28,Salary=13000}
+            //};
+
+            //Array.Sort(employees, new EmployeeComparerSalary());
+
             //foreach (var employee in employees)
             //{
             //    Console.WriteLine(employee);

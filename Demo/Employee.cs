@@ -1,5 +1,23 @@
-﻿namespace Demo
+﻿using System.Collections;
+
+namespace Demo
 {
+    class EmployeeComparerSalary : IComparer
+    {
+        public int Compare(object? x, object? y)
+        {
+            Employee X = (Employee)x;
+            Employee Y = (Employee)y;
+
+            // that's the logic of compare fun
+            //if (X.Salary > Y.Salary) return 1;
+            //else if (X.Salary < Y.Salary) return -1;
+            //else return 0;
+
+            // we use compareTo fun to reduce our codelines
+            return X.Salary.CompareTo(Y.Salary);
+        }
+    }
     internal class Employee : ICloneable, IComparable
     {
         public int Id { get; set; }
