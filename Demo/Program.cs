@@ -1,4 +1,5 @@
-﻿using Demo.Interface_Ex02;
+﻿using System.Text;
+using Demo.Interface_Ex02;
 
 namespace Demo
 {
@@ -49,17 +50,19 @@ namespace Demo
             #endregion
 
             #region InterfaceEx03
+
             //Car car = new Car();
             //car.Speed = 120;
             //car.Forward();
 
             //Airplane airplane = new Airplane();
-
             //IMoveable moveable = airplane;
+            //moveable.Backward();
             //moveable.Forward();
 
             //IFlyable flyable = airplane;
             //flyable.Forward();
+            //flyable.Backward();
             #endregion
 
             #region Shallow Copy Vs Deep Copy
@@ -185,33 +188,33 @@ namespace Demo
             //Console.WriteLine(Arr01[0]);
 
 
-            //StringBuilder[] Arr01 = new StringBuilder[]
-            //{ new StringBuilder("Ahmed"),
-            //  new StringBuilder("Ali"),
-            //  new StringBuilder("Omar")};
-            //StringBuilder[] Arr02 = new StringBuilder[]
-            //{ new StringBuilder("medo"),
-            //  new StringBuilder("eslam"),
-            //  new StringBuilder("tamer")};
+            StringBuilder[] Arr01 = new StringBuilder[]
+            { new StringBuilder("Ahmed"),
+              new StringBuilder("Ali"),
+              new StringBuilder("Omar")};
+            StringBuilder[] Arr02 = new StringBuilder[]
+            { new StringBuilder("medo"),
+              new StringBuilder("eslam"),
+              new StringBuilder("tamer")};
 
 
-            //Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
-            //Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
 
-            //Arr02 = (StringBuilder[])Arr01.Clone(); //Shallow Copy
+            Arr02 = (StringBuilder[])Arr01.Clone(); //Shallow Copy
             //////Copy Identity
             ////// { "Ahmed", "Ali", "mo" } --> Has Two Ref Arr01,Arr02
             ////// { "medo", "marwan", "adam" } --> UnReachable Object
 
-            //Console.WriteLine();
-            //Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
-            //Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+            Console.WriteLine();
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
 
             ////Identity (Address) + Object State [Data]
 
-            //Arr02[0].Append("Ahmed Amin");
+            Arr02[0].Append("Ahmed Amin");
 
-            //Console.WriteLine(Arr01[0]);
+            Console.WriteLine(Arr01[0]);
 
             #endregion
             #endregion
